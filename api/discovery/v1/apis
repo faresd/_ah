@@ -1,0 +1,31 @@
+{
+  "kind" : "discovery#directoryList",
+  "discoveryVersion" : "v1",
+  "items" : [ {
+    "kind" : "discovery#directoryItem",
+    "id" : "helloworld:v1",
+    "name" : "helloworld",
+    "version" : "v1",
+    "description" : "test description fdr",
+    "discoveryRestUrl" : "http://localhost:63342/_ah/api/helloworld/v1/rest",
+    "discoveryLink" : "../../helloworld/v1/rest",
+    "icons" : {
+      "x16" : "http://localhost:63342/_ah/api/icons/photo.gif",
+      "x32" : "http://www.google.com/images/icons/product/search-32.gif"
+    },
+    "preferred" : true
+  },{
+    "kind" : "discovery#directoryItem",
+    "id" : "helloworld2:v1",
+    "name" : "helloworld2",
+    "version" : "v1",
+    "description" : "test description customized",
+    "discoveryRestUrl" : "http://localhost:63342/_ah/api/helloworld2/v1/rest",
+    "discoveryLink" : "../../helloworld2/v1/rest",
+    "icons" : {
+      "x16" : "http://www.google.com/images/icons/product/search-16.gif",
+      "x32" : "http://www.google.com/images/icons/product/search-32.gif"
+    },
+    "preferred" : true
+  } ]
+}

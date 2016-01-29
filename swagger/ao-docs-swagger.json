@@ -1,0 +1,820 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "x-serviceName": "category",
+    "description": "Lets you manage (list, load, patch, update, add new, delete) categories and category values",
+    "contact": {
+      "url": "https://undefined"
+    },
+    "version": "v1"
+  },
+  "host": "ao-docs.appspot.com/_ah/api",
+  "basePath": "/category",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v1/libraries/{libraryId}/categories/{categoryId}": {
+      "delete": {
+        "operationId": "category.category.deleteCategoryDefinition",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "get": {
+        "operationId": "category.category.loadCategoryDefinition",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiCategoryDefinition"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    },
+    "/v1/libraries/{libraryId}/categories/{categoryId}/values/{categoryValueId}": {
+      "delete": {
+        "operationId": "category.category.deleteCategoryValue",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryValueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    },
+    "/v1": {
+      "put": {
+        "operationId": "category.category.insertCategoryDefinition",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiId"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "resource",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ApiCategoryDefinition"
+            }
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "patch": {
+        "operationId": "category.category.patchCategoryDefinition",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "resource",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ApiCategoryDefinition"
+            }
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "post": {
+        "operationId": "category.category.updateCategoryDefinition",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "resource",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ApiCategoryDefinition"
+            }
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    },
+    "/v1/libraries/{libraryId}/categories/{categoryId}/values": {
+      "put": {
+        "operationId": "category.category.insertChildCategoryValue",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiNameValue"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryValueName",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "parentCategoryValueId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "get": {
+        "operationId": "category.category.listChildCategoryValues",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiNameValueList"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "parentCategoryValueId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "patch": {
+        "operationId": "category.category.patchCategoryValue",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "resource",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ApiNameValue"
+            }
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    },
+    "/v1/libraries/{libraryId}": {
+      "get": {
+        "operationId": "category.category.listCategoryDefinitions",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiNameValueList"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    },
+    "/v1/libraries/{libraryId}/categories/{categoryId}/allvalueshierarchy": {
+      "get": {
+        "operationId": "category.category.listHierarchyCategoryValues",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ApiHierarchyList"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "securityCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "security": [
+          {
+            "Oauth2": [
+              "https://www.googleapis.com/auth/userinfo.email"
+            ]
+          }
+        ],
+        "tags": [
+          "category"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/alt"
+        },
+        {
+          "$ref": "#/parameters/fields"
+        },
+        {
+          "$ref": "#/parameters/key"
+        },
+        {
+          "$ref": "#/parameters/oauth_token"
+        },
+        {
+          "$ref": "#/parameters/prettyPrint"
+        },
+        {
+          "$ref": "#/parameters/quotaUser"
+        },
+        {
+          "$ref": "#/parameters/userIp"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "ApiCategoryDefinition": {
+      "type": "object",
+      "properties": {
+        "dynamicValues": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "libraryId": {
+          "type": "string"
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiHierarchyList": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ApiHierarchyValue"
+          }
+        },
+        "kind": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiHierarchyValue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentId": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiId": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiNameValue": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiNameValueList": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ApiNameValue"
+          }
+        },
+        "kind": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "parameters": {
+    "alt": {
+      "name": "alt",
+      "in": "query",
+      "description": "Data format for the response.",
+      "default": "json",
+      "type": "string",
+      "enum": [
+        "json"
+      ]
+    },
+    "fields": {
+      "name": "fields",
+      "in": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string"
+    },
+    "key": {
+      "name": "key",
+      "in": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "type": "string"
+    },
+    "oauth_token": {
+      "name": "oauth_token",
+      "in": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
+    },
+    "prettyPrint": {
+      "name": "prettyPrint",
+      "in": "query",
+      "description": "Returns response with indentations and line breaks.",
+      "default": true,
+      "type": "boolean"
+    },
+    "quotaUser": {
+      "name": "quotaUser",
+      "in": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+      "type": "string"
+    },
+    "userIp": {
+      "name": "userIp",
+      "in": "query",
+      "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+      "type": "string"
+    }
+  },
+  "securityDefinitions": {
+    "Oauth2": {
+      "type": "oauth2",
+      "description": "Oauth 2.0 authentication",
+      "flow": "implicit",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "scopes": {
+        "https://www.googleapis.com/auth/userinfo.email": "View your email address"
+      }
+    }
+  },
+  "externalDocs": {
+    "url": "https://docs.google.com/a/doctusoft.com/document/d/1jEXKwoJwfRGKAXuHQKhdEsuc96BoTCKm9iImQ41St94/edit#heading=h.w0l8vwq6bpdd"
+  }
+}
